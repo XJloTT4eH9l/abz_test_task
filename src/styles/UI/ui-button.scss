@@ -1,0 +1,11 @@
+@import '../variables.scss';
+
+.ui-button {
+    padding: 4px 18px;
+    border-radius: $border-radius-big;
+    background-color: $primary-color;
+    transition: background-color 0.2s linear;
+    &:hover {
+        background-color: $primary-hover-color;
+    }
+}

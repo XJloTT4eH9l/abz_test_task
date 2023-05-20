@@ -1,0 +1,21 @@
+@import '../variables.scss';
+
+.header {
+    padding: 13px 0;
+    background-color: $white-color;
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+.nav {
+    &__list {
+        display: flex;
+        align-items: center;
+    }
+    &__item:not(:last-child) {
+        margin-right: 10px;
+    }
+}
