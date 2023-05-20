@@ -1,0 +1,18 @@
+@import './reset.scss';
+@import './fonts.scss';
+@import './variables.scss';
+
+//common styles
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
+    color: $black-color;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: $container-width;
+    padding: 0 15px;
+    margin: 0 auto;
+}
