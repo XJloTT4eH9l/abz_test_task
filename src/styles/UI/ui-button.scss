@@ -1,8 +1,14 @@
 @import '../variables.scss';
 
 .ui-button {
-    padding: 4px 18px;
+    display: block;
+    min-width: 100px;
+    max-width: 100px;
+    margin: 0 auto;
+    padding: 4px 0;
+    text-align: center;
     border-radius: $border-radius-big;
+    color: $black-color;
     background-color: $primary-color;
     transition: background-color 0.2s linear;
     &:hover {
