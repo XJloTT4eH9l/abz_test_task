@@ -3,9 +3,11 @@
 .ui-button {
     display: block;
     min-width: 100px;
-    max-width: 100px;
+    max-width: 120px;
+    padding: 4px 18px;
     margin: 0 auto;
-    padding: 4px 0;
+    font-size: $font-size-default;
+    line-height: $line-height-default;
     text-align: center;
     border-radius: $border-radius-big;
     color: $black-color;

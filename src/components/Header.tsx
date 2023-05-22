@@ -11,10 +11,10 @@ const Header = () => {
                     <nav className="nav">
                         <ul className="nav__list">
                             <li className="nav__item">
-                                <UIButton title='Users' type='link' href='#users'/>
+                                <UIButton title='Users' type='link' href='#users' />
                             </li>
                             <li className="nav__item">
-                                <UIButton title='Sign up' type='link' href='#signUp'/>
+                                <UIButton title='Sign up' type='link' href='#signUp' />
                             </li>
                         </ul>
                     </nav>

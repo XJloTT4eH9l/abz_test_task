@@ -3,13 +3,15 @@
 @import './variables.scss';
 
 //common styles
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: 'Nunito', sans-serif;
     font-size: $font-size-default;
     line-height: $line-height-default;
     color: $black-color;
     background-color: $background-color;
-    scroll-behavior: smooth;
 }
 
 .container {

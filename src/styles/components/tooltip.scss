@@ -1,0 +1,15 @@
+@import '../variables.scss';
+
+.tooltip {
+    font-size: 16px !important;
+    line-height: 26px !important;
+    padding: 3px 16px !important;
+    color: $white-color !important;
+    background: rgba(0, 0, 0, 0.87) !important;
+    border-radius: 4px !important;
+    opacity: 1 !important;
+}
+
+.react-tooltip-arrow {
+    display: none;
+}
