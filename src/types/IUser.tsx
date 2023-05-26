@@ -8,3 +8,10 @@ export interface IUser {
     position_id: number;
     registration_timestamp: number;
 }
+
+export interface IUsersContext {
+    users: IUser[];
+    getUsers: (page: number, collapse: boolean) => Promise<void>;
+    loading: boolean;
+    totalPages: number;
+}

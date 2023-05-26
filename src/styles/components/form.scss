@@ -1,0 +1,57 @@
+@import '../variables.scss';
+
+.form {
+    margin-top: $spacing-large;
+    &__container {
+        max-width: 380px;
+        margin: 0 auto;
+    }
+    &__input {
+        margin-bottom: $spacing-large !important;
+    }
+    &__submit {
+        display: block;
+        min-width: 100px;
+        padding: 4px 18px;
+        margin: 0 auto;
+        font-size: $font-size-default;
+        line-height: $line-height-default;
+        text-align: center;
+        border-radius: $border-radius-big;
+        color: $black-color;
+        background-color: $primary-color;
+        transition: color 0.2s linear, background-color 0.2s linear;
+        &:hover {
+            background-color: $primary-hover-color;
+        }
+        &:disabled {
+            cursor: default;
+            color: $white-color;
+            background-color: $grey-color;
+        }
+    }
+    &__radio-group {
+        margin-bottom: $spacing-large;
+    }
+    &__radio-item {
+        margin-bottom: 7px;
+    }
+    &__position {
+        margin-bottom: $spacing-small;
+    }
+    &__label {
+        font-size: $font-size-default;
+        font-family: "Nunito", sans-serif;
+        line-height: $line-height-default;
+    }
+    &__error {
+        margin-top: 4px;
+        padding-left: 16px;
+        font-size: 12px;
+        line-height: 14px;
+        color: $red-color;
+    }
+    &__container {
+        margin-bottom: $spacing-large;
+    }
+}

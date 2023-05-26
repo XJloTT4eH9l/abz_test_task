@@ -5,13 +5,13 @@
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: $spacing-big;
+        gap: 30px;
         margin-bottom: $spacing-large;
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 980px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;
         }
-        @media screen and (max-width: 500px) {
+        @media screen and (max-width: 630px) {
             grid-template-columns: repeat(1, 1fr);
         }
     }
@@ -26,6 +26,10 @@
     background-color: $white-color;
     text-align: center;
     border-radius: $border-radius-user;
+    &__container {
+        margin: 0 auto;
+        max-width: 242px;
+    }
     &__img {
         width: 70px;
         height: 70px;
@@ -33,9 +37,17 @@
         margin-bottom: $spacing-medium;
     }
     &__name {
+        margin: 0 auto;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
         margin-bottom: $spacing-medium;
     }
     &__email, &__phone {
         display: block;
+        margin: 0 auto;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

@@ -18,9 +18,19 @@ body {
     max-width: $container-width;
     padding: 0 15px;
     margin: 0 auto;
+    @media screen and (max-width: 1024px) {
+        max-width: 934px;
+    }
+    @media screen and (max-width: 768px) {
+        max-width: 734px;
+    }
+    @media screen and (max-width: 360px) {
+        max-width: 358px;
+    }
 }
 
 .title {
     font-size: $font-size-title;
     line-height: $line-height-big;
+    text-align: center;
 }

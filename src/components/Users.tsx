@@ -1,42 +1,24 @@
-import { FC, useState, useEffect } from 'react';
-import axios from 'axios';
-import { API_USERS } from '../constants/api';
-import { IUser } from '../types/IUser';
+import { FC, useState, useEffect, useContext } from 'react';
+import { IUsersContext } from '../types/IUser';
+import { UsersContext } from '../context/usersContext';
 
 import User from './User';
 import Preloader from './Preloader';
 import UIButton from './UI/UIButton';
 
-const Users:FC = () => {
-    const [users, setUsers] = useState<IUser[]>([]);
-    const [page, setPage] = useState<number>(1);
-    const [totalPages, setTotalPages] = useState<number>(0);
-    const [loading, setLoading] = useState<boolean>(false);
-    const usersPerPage = 6;
+import '../styles/components/user.scss';
 
-    const getUsers = async () => {
-        try {
-            setLoading(true);
-            const responce = await axios.get(API_USERS + `?page=${page}&count=${usersPerPage}`);
-            if(responce.status === 200) {
-                setPage(prev => prev + 1);
-                setUsers(prev => [...prev, ...responce.data.users]);
-                setTotalPages(responce.data.total_pages);
-            }
-            setLoading(false);
-        } catch (error) {
-            console.log(error);
-        }
-    }
+const Users:FC = () => {
+    const { users, getUsers, loading, totalPages } = useContext(UsersContext) as IUsersContext;
+    const [page, setPage] = useState<number>(1);
 
     const showMore = () => {
-        getUsers();
+        setPage(prev => prev + 1);
     }
 
-
     useEffect(() => {
-        getUsers();
-    }, [])
+        getUsers(page, false);
+    }, [page])
 
     return (
         <section className="users" id='users'>
@@ -63,3 +45,18 @@ const Users:FC = () => {
 }
 
 export default Users;
+
+// const getUsers = async () => {
+    //     try {
+    //         setLoading(true);
+    //         const responce = await axios.get(API_USERS + `?page=${page}&count=${usersPerPage}`);
+    //         if(responce.status === 200) {
+    //             setPage(prev => prev + 1);
+    //             setUsers(prev => [...prev, ...responce.data.users]);
+    //             setTotalPages(responce.data.total_pages);
+    //         }
+    //         setLoading(false);
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // }
