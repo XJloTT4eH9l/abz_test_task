@@ -45,18 +45,3 @@ const Users:FC = () => {
 }
 
 export default Users;
-
-// const getUsers = async () => {
-    //     try {
-    //         setLoading(true);
-    //         const responce = await axios.get(API_USERS + `?page=${page}&count=${usersPerPage}`);
-    //         if(responce.status === 200) {
-    //             setPage(prev => prev + 1);
-    //             setUsers(prev => [...prev, ...responce.data.users]);
-    //             setTotalPages(responce.data.total_pages);
-    //         }
-    //         setLoading(false);
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // }

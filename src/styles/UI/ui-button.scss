@@ -16,4 +16,9 @@
     &:hover {
         background-color: $primary-hover-color;
     }
+    
+}
+.short {
+    max-width: 100px;
+    transform: translateY(3px);
 }

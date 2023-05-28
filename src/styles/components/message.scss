@@ -1,0 +1,18 @@
+@import '../variables.scss';
+
+.message {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    &__title {
+        margin-bottom: $spacing-large;
+    }
+    &__container {
+        text-align: center;
+    }
+    &__img {
+        margin: 0 auto;
+        width: 328px;
+        height: 290px;
+    }
+}

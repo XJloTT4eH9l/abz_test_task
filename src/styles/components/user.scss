@@ -2,11 +2,14 @@
 
 .users {
     padding: 140px 0;
+    @media screen and (max-width: 360px) {
+        padding-bottom: 160px;
+    }
     &__list {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 30px;
-        margin-bottom: $spacing-large;
+        margin-bottom: 49px;
         @media screen and (max-width: 980px) {
             grid-template-columns: repeat(2, 1fr);
             gap: 16px;

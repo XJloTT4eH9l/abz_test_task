@@ -11,6 +11,7 @@ const Hero = () => {
                     title='Sign up' 
                     type='link' 
                     href='#signUp' 
+                    classes="short"
                 />
             </div>
         </section>

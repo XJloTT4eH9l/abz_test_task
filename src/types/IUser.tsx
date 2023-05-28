@@ -11,7 +11,9 @@ export interface IUser {
 
 export interface IUsersContext {
     users: IUser[];
-    getUsers: (page: number, collapse: boolean) => Promise<void>;
     loading: boolean;
     totalPages: number;
+    token: string;
+    getUsers: (page: number, collapse: boolean) => Promise<void>;
+    getToken: () => Promise<void>;
 }
