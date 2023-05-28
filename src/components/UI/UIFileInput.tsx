@@ -6,7 +6,7 @@ interface IFormType {
     name: string;
     email: string;
     phone: string;
-    position: string;
+    position_id: string;
     photo: File;
 }
 
@@ -35,7 +35,7 @@ const UIFileInput:FC<FileInputProps> = ({ field }) => {
             <input 
                 className='upload-photo' 
                 type='file' 
-                accept="image/jpg, image/jpeg" 
+                accept=".jpg, .jpeg" 
                 id="file" 
                 onChange={uploadPhotoHandler} 
             />

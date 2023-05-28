@@ -18,7 +18,7 @@ interface IFormType {
     name: string;
     email: string;
     phone: string;
-    position: string;
+    position_id: string;
     photo: File;
 }
 
@@ -42,11 +42,11 @@ const Form: FC = () => {
     const onSubmit: SubmitHandler<IFormType> = async (data) => {
         setLoading(true);
         let formData = new FormData();
-        formData.append('position_id', data.position);
         formData.append('name', data.name);
         formData.append('email', data.email);
         formData.append('phone', data.phone);
-        formData.append('photo', data.photo)
+        formData.append('photo', data.photo);
+        formData.append('position_id', data.position_id);
         console.log(data);
 
         try {
@@ -60,7 +60,7 @@ const Form: FC = () => {
                 setUserPosted(true);
                 reset();
             } else {
-                console.log(responce.data.message);
+                console.log(responce)
             }
 
         } catch (error) {
@@ -176,7 +176,7 @@ const Form: FC = () => {
 
                             {positions.length > 0 ? (
                                 <Controller
-                                    name="position"
+                                    name="position_id"
                                     control={control}
                                     rules={{ required: 'This field is required' }}
                                     render={({ field: { onChange, value }, }) => (
