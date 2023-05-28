@@ -13,3 +13,11 @@
 - Sass(SCSS)
 - Material UI
 - React hook form
+
+## Page speed
+
+- PageSpeed Insights
+![PageSpeed Insights](/src/assets/img/computerPageSpeed.jpg "Computer page speed")
+
+- LighHouse desktop/mobile speed
+![LighHouse](/src/assets/img/lightHouse.jpg "LighHouse page speed")
